@@ -19,3 +19,5 @@ export class PacienteService {
     return prisma.paciente.delete({ where: { id } });
   }
 }
+
+export default new PacienteService();

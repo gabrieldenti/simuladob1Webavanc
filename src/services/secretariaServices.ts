@@ -19,3 +19,5 @@ export class SecretariaService {
     return prisma.secretaria.delete({ where: { id } });
   }
 }
+
+export default new SecretariaService();

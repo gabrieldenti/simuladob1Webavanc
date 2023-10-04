@@ -19,3 +19,5 @@ export class AgendaService {
     return prisma.agenda.delete({ where: { id } });
   }
 }
+
+export default new AgendaService();

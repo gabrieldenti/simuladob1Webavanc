@@ -19,3 +19,5 @@ export class ConsultaService {
     return prisma.consulta.delete({ where: { id } });
   }
 }
+
+export default new ConsultaService();
