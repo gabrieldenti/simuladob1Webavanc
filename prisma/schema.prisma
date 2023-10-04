@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Definição dos modelos
+model Paciente {
+  id       Int      @id @default(autoincrement())
+  nomePcnte String  @unique
+  senha    Int
+  usuario  String
+  consultas Consulta[]
+  agendas  Agenda[]  // Adicione esta linha para a relação inversa com Agenda
+  secretarias Secretaria[] // Adicione esta linha para a relação inversa com Secretaria
+
+  // Relação inversa para Consulta
+  @@map("pacientes")
+}
+
+model Consulta {
+  id        Int      @id @default(autoincrement())
+  data      DateTime
+  nomePcnte String
+  nomeDents String
+  paciente  Paciente @relation(fields: [nomePcnte], references: [nomePcnte])
+
+  // Relação inversa para Paciente
+  @@map("consultas")
+}
+
+model Agenda {
+  id       Int      @id @default(autoincrement())
+  data     DateTime
+  nomePcnt String?
+  paciente  Paciente? @relation(fields: [nomePcnt], references: [nomePcnte])
+
+  // Relação inversa para Paciente
+  @@map("agendas")
+}
+
+model Secretaria {
+  id         Int      @id @default(autoincrement())
+  nome       String   @unique
+  RG         Int
+  pacientes  Paciente[]
+
+  // Relação inversa para Paciente
+  @@map("secretarias")
+}
