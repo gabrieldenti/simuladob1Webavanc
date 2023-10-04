@@ -25,5 +25,5 @@ if (process.env.PORT) {
     console.log(`Servidor rodando em http://localhost:${port}`);
     });
 }else {
-  console.log("FFalha ao carregar o ambiente");
+  console.log("Falha ao carregar o ambiente");
 }
