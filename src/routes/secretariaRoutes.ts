@@ -4,7 +4,6 @@ import * as secretariaController from '../controllers/secretariaController';
 const router = express.Router();
 
 router.post('/', secretariaController.criarSecretaria);
-router.get('/', secretariaController.obterSecretariaPorId);
 router.get('/:id', secretariaController.obterSecretariaPorId);
 router.put('/:id', secretariaController.atualizarSecretaria);
 router.delete('/:id', secretariaController.excluirSecretaria);
