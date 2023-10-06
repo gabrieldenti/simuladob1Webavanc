@@ -25,6 +25,8 @@ Agora com o projeto configurado e com todas as suas dependencias baixadas no ter
 npx prisma migrate dev
 ```
 
+Obs: O banco de dados não está com dados inseridos nele , apenas a criação de tabelas e relações estão criados no schema do prisma, caso precise, popule o banco de dados para testes.
+
 Inicie o projeto com o seguinte comando no terminal:
 ```
 npm run dev ou npm run prod 
