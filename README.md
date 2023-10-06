@@ -16,7 +16,7 @@ npm install
 
 ## Passos Iniciais
 
-Crie um arquivo `.env` na raiz do projeto e adicionar as variaveis necessárias. Você pode usar o arquivo `.env.example` de referência para as variáveis que são necessárias.
+Crie um arquivo `.env` na raiz do projeto e adicionar as variaveis necessárias para ajustar a conexão do banco de dados. Você pode usar o arquivo `.env.example` de referência para as variáveis que são necessárias.
 
 ## Rodando Projeto
 
