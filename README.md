@@ -20,9 +20,13 @@ Crie um arquivo `.env` na raiz do projeto e adicionar as variaveis necessárias.
 
 ## Rodando Projeto
 
-Agora com o projeto configurado e com todas as suas dependencias baixadas no terminal execute o seguinte comando para criar as tabelas do banco de dados:
+Agora com o projeto configurado e com todas as suas dependencias baixadas no terminal execute o seguinte comando para criar ou atualizar as tabelas do banco de dados:
 ```
 npx prisma migrate dev
+```
+Para gerar a atualização feita do banco de dados no projeto, execute este comando:
+```
+npx prisma generate
 ```
 
 Obs: O banco de dados não está com dados inseridos nele , apenas a criação de tabelas e relações estão criados no schema do prisma, caso precise, popule o banco de dados para testes.
